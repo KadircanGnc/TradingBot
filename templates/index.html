@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Trading Bot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">AI Trading Bot</h1>
+        <form action="/backtest" method="post" class="text-center">
+            <div class="form-group">
+                <label for="ticker">Select Company:</label>
+                <select name="ticker" id="ticker" class="form-control">
+                    <option value="AAPL">Apple (AAPL)</option>
+                    <option value="MSFT">Microsoft (MSFT)</option>
+                    <option value="GOOGL">Google (GOOGL)</option>
+                    <option value="AMZN">Amazon (AMZN)</option>
+                    <option value="NFLX">Netflix (NFLX)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="strategy">Select Strategy:</label>
+                <select name="strategy" id="strategy" class="form-control">
+                    <option value="momentum">Momentum Strategy</option>
+                    <option value="moving_average">Moving Average Strategy</option>
+                    <option value="rsi">RSIStrategy</option>
+                    <option value="bollinger_bands">Bollinger Bands Strategy</option>
+                    <option value="ema_crossover">EMA Crossover Strategy</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Run Backtest</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

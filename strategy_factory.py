@@ -1,4 +1,4 @@
-from strategies import MomentumStrategy, MovingAverageStrategy, RSIStrategy, BollingerBandsStrategy, EMACrossoverStrategy, AITradingStrategy
+from strategies import MomentumStrategy, MovingAverageStrategy, RSIStrategy, BollingerBandsStrategy, EMACrossoverStrategy
 
 class StrategyFactory:
     @staticmethod
@@ -13,7 +13,5 @@ class StrategyFactory:
             return BollingerBandsStrategy()
         elif strategy_type == "ema_crossover":
             return EMACrossoverStrategy()
-        elif strategy_type == "ai":
-            return AITradingStrategy()
         else:
             raise ValueError("Unknown strategy type")

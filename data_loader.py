@@ -1,7 +1,5 @@
 import numpy as np
 import yfinance as yf
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
 
 def load_market_data(tickers=None, period="1mo", interval="1d"):
     if tickers is None:
